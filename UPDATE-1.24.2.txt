@@ -1,0 +1,8 @@
+PEMBARUAN LOGO, TEMA, DAN KLAIM DITOLAK 2025
+
+- Logo sekarang dapat diganti melalui SW Admin > Pengaturan dengan upload JPG, PNG, WebP, atau URL logo alternatif.
+- Logo pengaturan diterapkan pada sidebar Dashboard, SW Admin, login, dan halaman 404 theme.
+- Warna utama tetap dapat diubah dari SW Admin > Pengaturan dan diterapkan ke semua shell aplikasi.
+- Klaim Ditolak 2025 memakai layout referensi: tabel grouped Area Head, total per Area Head, total keseluruhan, dan dua donut chart distribusi Area Head serta Asuradur.
+- Form input Klaim Ditolak 2025 mencakup BO, Uker, Nama Nasabah, No Rek, Asuradur, Policy, Nilai Klaim Rupiah, LastDate, alasan, tindak lanjut, PIC, dan catatan.
+- Data demo referensi dibuat otomatis hanya saat menu kosong atau masih berisi data demo bawaan. Data aktual tidak ditimpa.

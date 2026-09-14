@@ -1,0 +1,4 @@
+PEMBARUAN 1.24.3
+
+- Tabel Klaim Ditolak 2025 tidak lagi menggunakan lebar minimum 930px atau scroll horizontal.
+- Tabel menggunakan layout fluid, teks panjang membungkus otomatis, dan tampilan mobile berubah menjadi daftar per baris agar seluruh data tetap terlihat tanpa geser kiri-kanan.

@@ -1,0 +1,40 @@
+CLAIMTRACK CORE 1.24.0 + THEME 1.22.0
+
+PEMASANGAN
+1. Backup situs dan database WordPress terlebih dahulu.
+2. Plugins > Add New > Upload Plugin: unggah ZIP core, pilih penggantian versi terpasang.
+3. Appearance > Themes > Add New > Upload Theme: unggah ZIP theme, pilih penggantian versi terpasang.
+4. Pastikan ClaimTrack Core dan theme Claim Track V1 aktif. Bersihkan cache situs/browser.
+5. Buka /sw-admin menggunakan akun Administrator ClaimTrack.
+6. Di sidebar, buka MONITORING & KINERJA. Keempat menu tersedia untuk input.
+
+DATA DAN INPUT
+- Monitoring Jt Tempo Klaim: nomor klaim, debitur, unit, asuradur, nominal, tanggal pengajuan, jatuh tempo, status, PIC, tindak lanjut. Sisa waktu dihitung dari tanggal WordPress; status Selesai tidak dihitung terlambat.
+- Monitoring Pra Klaim: identitas klaim, nominal, periode, kolektibilitas, kelengkapan dokumen, target pengajuan, status, PIC, catatan.
+- Best Performance: unit, periode, target, realisasi, jumlah klaim selesai, persentase tepat waktu, PIC, catatan. Capaian = realisasi/target x 100%. Pilih satu periode untuk perbandingan antarunit dalam bulan yang sama. Tanpa filter, peringkat membandingkan semua baris unit-periode, bukan agregasi tahunan.
+- Klaim Ditolak 2025: identitas klaim, nominal, tanggal ditolak, alasan, tindak lanjut, PIC, catatan. Tanggal penolakan wajib di tahun 2025.
+- Nominal menggunakan JUTA RUPIAH. Input 1250.50 berarti Rp1.250.500.000. Jangan gunakan pemisah ribuan pada input.
+- Tambah melalui formulir bawah tabel. Edit melalui tautan per baris. Hapus memerlukan konfirmasi per baris.
+- Data tersimpan di database WordPress dan langsung digunakan dashboard pengguna.
+- Input hanya melalui otorisasi administrator yang sudah diterapkan aplikasi, dengan nonce WordPress.
+- Validasi server memeriksa tanggal, pilihan status, angka non-negatif, target > 0 dan persentase 0–100. Isian dikembalikan saat validasi gagal selama sesi pengguna (maksimal 5 menit).
+
+DATA CONTOH
+- Empat contoh per menu (16 total) dibuat sekali setelah pembaruan dijalankan.
+- Contoh diberi label; data baru secara default berlabel Aktual.
+- Saat mengubah contoh menjadi aktual, hilangkan centang Tandai sebagai data contoh.
+- Ringkasan dan peringkat menyertakan contoh yang lolos filter. Hapus/ganti semua contoh sebelum memakai laporan operasional.
+- Menghapus contoh tidak membuatnya muncul kembali pada refresh.
+- Data fase, debitur dan master yang sudah ada tidak diganti. Konten Page lama tetap tersimpan, tetapi tampilan empat menu sekarang menggunakan dashboard data terstruktur.
+
+EKSPOR DAN BACKUP
+- Ekspor Excel/PDF pada menu pengguna memakai data menu dan filter pencarian/periode aktif.
+- Backup JSON format 5 menyertakan empat menu baru. Restore versi lama 1–4 tetap didukung dan tidak mengubah data monitoring yang tidak ada dalam backup lama.
+- Import Excel/CSV matriks fase lama tetap untuk data fase. Input empat menu baru dilakukan melalui formulir /sw-admin; pemindahan lengkap melalui backup JSON.
+
+VALIDASI PAKET
+- Seluruh 14 file PHP lolos pemeriksaan parser PHP 8.0.
+- File aplikasi lolos PHP runtime lint.
+- Uji PHP terisolasi dengan stub WordPress: seed idempotent, tambah/edit/hapus, persistensi, filter/ekspor, form admin, tanggal 2025, angka invalid, persentase, larangan hapus lintas menu, backup/restore, dan contoh tidak muncul ulang: lulus.
+- Pengujian ini tidak menggantikan pengujian pada instalasi WordPress aktual; paket belum dipasang di server pengguna.
+- Pemeriksaan visual browser otomatis belum dijalankan: unduhan browser pengujian mengalami timeout. CSS menyediakan breakpoint desktop/tablet/mobile; verifikasi tampilan pada staging tetap diperlukan.
