@@ -1,0 +1,4 @@
+PEMBARUAN THEME 1.22.2
+
+- Theme mengikuti logo yang dipilih dari SW Admin > Pengaturan pada halaman fallback/404.
+- Sinkron dengan ClaimTrack Core 1.24.2 untuk layout Klaim Ditolak 2025 dan pengaturan warna/logo terpusat.

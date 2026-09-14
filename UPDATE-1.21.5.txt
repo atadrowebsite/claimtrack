@@ -1,0 +1,49 @@
+CLAIMTRACK CORE 1.23.9 + CLAIM TRACK V1 1.21.5
+Perbaikan berdasarkan gambar dengan sembilan penanda.
+
+1. Header hanya menampilkan nama pengguna satu kali; awalan Admin dihapus.
+2. Tombol grafik Asuradur menggunakan nama Asuradur aktif dari master data.
+   Klik tombol memilih segmen Asuradur, terpisah dari tombol Unit Kerja.
+3. Tabel berada di dalam panel putih dengan padding 10 px tanpa margin negatif.
+4. Panel dan area tabel memiliki sudut membulat dan clipping; pada ponsel
+   tabel tetap dapat digeser horizontal di dalam panel.
+5. Footer hitam ditambahkan: Copyright [tahun berjalan] -
+   Claimtrack.Commercial18 ID | All Right Reserved.
+6. Judul luar DATA DEBITUR KDP dihapus. Judul di dalam panel tetap ada.
+7. Angka isi tabel dan total diseragamkan rata kanan.
+8. Empat menu ditambahkan setelah E-Knowledge:
+   Monitoring Jt Tempo Klaim, Monitoring Pra Klaim, Best Performance,
+   dan Klaim Ditolak 2025.
+9. Kartu WhatsApp beserta SVG logo ditampilkan kembali di sidebar.
+
+PEMASANGAN
+- WordPress > Plugins > Add New > Upload Plugin: unggah ZIP Core 1.23.9,
+  pilih penggantian plugin yang sudah terpasang.
+- Appearance > Themes > Add New > Upload Theme: unggah ZIP theme 1.21.5,
+  pilih penggantian theme yang sudah terpasang.
+- Bersihkan cache halaman/CSS lalu muat ulang dashboard.
+- SW Admin > Pengaturan > Nomor WhatsApp Admin: isi nomor jika masih kosong,
+  dalam format internasional misalnya 6281234567890.
+  Logo tetap tampil ketika nomor kosong, tetapi Chat belum tersedia.
+
+KONTEN EMPAT MENU BARU
+Menu memiliki route sendiri di aplikasi. Isi modul/perhitungan monitoring
+belum tersedia di file asal dan tidak dibuat menggunakan data contoh.
+Untuk menampilkan konten, terbitkan halaman WordPress dengan slug berikut:
+- monitoring-jt-tempo-klaim
+- monitoring-pra-klaim
+- best-performance
+- klaim-ditolak-2025
+Konten halaman tersebut tampil di dalam shell aplikasi. Jangan isi dengan
+shortcode [claimtrack_app], karena akan merender aplikasi secara berulang.
+Jika halaman belum terbit, kosong, atau diproteksi password, ditampilkan
+pesan bahwa belum ada konten yang diterbitkan. Halaman WordPress berstatus
+publish juga mengikuti aturan akses publik WordPress yang sudah berlaku.
+
+VERIFIKASI
+- Sintaks JavaScript: lulus node --check.
+- Interaksi pemilih Asuradur: lulus pengujian event dan status tombol,
+  termasuk perpindahan pilihan tanpa memakai selector Unit Kerja.
+- Struktur ZIP dan integritas berkas: diperiksa saat pengemasan.
+- Belum menjalankan PHP/WordPress atau verifikasi visual browser karena
+  runtime tersebut tidak tersedia. Periksa tampilan akhir setelah pemasangan.

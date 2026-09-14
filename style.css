@@ -1,0 +1,88 @@
+/*
+Theme Name: Claim Track V1
+Author: Atadro Website
+Description: Theme dashboard Claim Track V1 dengan tampilan navy, hijau, panel putih, tabel responsif, dan shell terpadu untuk Dashboard User serta SW Admin.
+Version: 1.22.3
+Requires at least: 6.0
+Requires PHP: 8.0
+Text Domain: claim-track-v1
+*/
+html,body{margin:0;padding:0;background:#dce3ed;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;min-width:0}
+body{overflow-x:hidden;color:#1f2937}
+a{color:inherit}
+.ct-theme-fallback{max-width:980px;margin:60px auto;padding:24px;background:#fff;border-radius:20px;box-shadow:0 12px 34px rgba(37,28,81,.07)}
+
+
+/* ClaimTrack 1.7.0 */
+html{margin-top:0!important}
+#wpadminbar{display:none!important}
+body.admin-bar{margin-top:0!important}
+.ct-404-page{min-height:100vh;display:grid;place-items:center;padding:24px;background:linear-gradient(145deg,#063f69,#08759d);font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+.ct-404-card{width:min(560px,100%);background:#fff;border-radius:26px;padding:38px 32px;text-align:center;box-shadow:0 26px 70px rgba(0,34,63,.25)}
+.ct-404-card img{display:block;width:min(300px,78%);height:auto;margin:0 auto 26px}
+.ct-404-code{font-size:72px;line-height:1;font-weight:800;color:#08739a;letter-spacing:-.04em}
+.ct-404-card h1{margin:12px 0 8px;font-size:28px;color:#17324a}.ct-404-card p{margin:0 0 24px;color:#718096;font-size:14px}.ct-404-card a{display:inline-flex;min-height:46px;align-items:center;justify-content:center;padding:0 20px;border-radius:12px;background:#075a8d;color:#fff;text-decoration:none;font-size:14px;font-weight:700}
+@media(max-width:600px){.ct-404-page{padding:16px}.ct-404-card{padding:30px 20px;border-radius:22px}.ct-404-code{font-size:58px}.ct-404-card h1{font-size:22px}}
+.ct-404-card img{background:#064c79;padding:12px 16px;border-radius:14px;box-sizing:border-box}
+
+/* ClaimTrack 1.15.9: mobile containment for phase screens. */
+@media(max-width:700px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden!important}
+}
+
+/* ClaimTrack 1.17.0: reference workspace base and strict mobile containment. */
+body.claimtrack-page-app,body.claimtrack-front-app,body.claimtrack-standalone-app{background:#dce3ed!important}
+body.claimtrack-page-app .ct-app,body.claimtrack-front-app .ct-app,body.claimtrack-standalone-app .ct-app{max-width:100%;overflow-x:hidden}
+@media(max-width:980px){html,body{width:100%;max-width:100%;overflow-x:hidden!important}}
+
+
+/* Claim Track V1 1.18.0 - global HTML reference shell */
+html,body{background:#0b1f38!important;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif!important}
+body.claimtrack-page-app,body.claimtrack-front-app,body.claimtrack-standalone-app{background:#dce3ed!important;color:#333!important}
+.ct-theme-fallback{border-radius:6px!important}
+
+/* Claim Track V1 1.19.0 */
+body.claimtrack-page-app,body.claimtrack-front-app,body.claimtrack-standalone-app{background:#dce3ed!important}
+
+/* Claim Track V1 1.20.0 compatibility marker: UI refinements are delivered by ClaimTrack Core 1.20.0. */
+
+/* Claim Track V1 1.20.1 - phase spacing safety fallback. */
+body.claimtrack-page-app .ct-phase-content--detail .ct-kdp-hero.ct-kdp-reference-hero.ct-htmlref-phase-hero,
+body.claimtrack-front-app .ct-phase-content--detail .ct-kdp-hero.ct-kdp-reference-hero.ct-htmlref-phase-hero,
+body.claimtrack-standalone-app .ct-phase-content--detail .ct-kdp-hero.ct-kdp-reference-hero.ct-htmlref-phase-hero{min-height:0!important;height:auto!important;max-height:none!important;margin-bottom:0!important;padding-bottom:0!important}
+body.claimtrack-page-app .ct-phase-content--detail .ct-htmlref-kpi-grid,
+body.claimtrack-front-app .ct-phase-content--detail .ct-htmlref-kpi-grid,
+body.claimtrack-standalone-app .ct-phase-content--detail .ct-htmlref-kpi-grid{padding-bottom:8px!important;margin-bottom:0!important}
+
+
+/* ClaimTrack Theme mobile/tablet final compatibility */
+img,svg,canvas{max-width:100%;height:auto}
+table{max-width:100%}
+@media(max-width:1024px){
+ .ct-app{max-width:100%!important}
+}
+@media(max-width:767px){
+ .ct-theme-fallback{margin:20px 12px;padding:18px}
+}
+
+/* 1.21.5: keep the app footer inside the workspace and size the WhatsApp SVG explicitly. */
+.ct-app .ct-app-footer{box-sizing:border-box;width:100%;overflow-wrap:anywhere}
+.ct-app .ct-help-card-icon--wa svg{display:block;width:28px;height:28px;max-width:none;flex:none}
+
+
+/* ClaimTrack mobile app theme */
+html,body{max-width:100%;overflow-x:hidden}
+@media(max-width:768px){.claimtrack-page-app{font-size:14px}.ct-theme-fallback{padding:16px}}
+
+/* Monitoring: full-width shell and accessible mobile controls. */
+.ct-monitor{font-family:inherit;min-width:0}
+.ct-admin-main:has(.ct-monitor),.ct-main:has(.ct-monitor){min-width:0}
+.ct-monitor :focus-visible{outline:3px solid #1680cf;outline-offset:3px}
+@media(max-width:640px){.ct-monitor input,.ct-monitor select,.ct-monitor textarea{font-size:16px}.ct-monitor{padding-bottom:24px}}
+
+/* ClaimTrack 1.22.3: keep the rejected-claims table contained on every viewport. */
+.ct-rejected-2025,.ct-rejected-layout,.ct-rejected-table-card,.ct-rejected-table-scroll,.ct-rejected-table{min-width:0!important;max-width:100%!important;width:100%;}
+.ct-rejected-table-scroll{overflow:hidden!important;}
+
+/* Match the phase dashboard workspace for monitoring views. */
+.ct-monitor--phase{background:var(--ct-ref-workspace,#dce3ed)}

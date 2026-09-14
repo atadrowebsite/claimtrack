@@ -1,0 +1,3 @@
+PEMBARUAN 1.22.3
+
+- Menjaga tabel Klaim Ditolak 2025 tetap pas di dalam area theme tanpa overflow horizontal.

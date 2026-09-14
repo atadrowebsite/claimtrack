@@ -1,0 +1,20 @@
+PEMBARUAN TAMPILAN MENU MONITORING — CORE 1.24.1 / THEME 1.22.1
+
+Keempat menu mengikuti desain menu fase:
+- Banner navy dan kartu ringkasan hijau memakai kelas tampilan fase yang sama.
+- Ringkasan posisi per unit kerja, tabel header biru dengan total ungu.
+- Dua diagram donat: komposisi nominal per status/periode dan per unit kerja.
+- Panel putih, latar workspace abu-abu, ukuran teks dan radius mengikuti fase.
+- Rincian data, peringkat Best Performance, filter dan input admin tetap tersedia.
+- Susunan responsif untuk desktop, tablet dan ponsel; tabel lebar dapat digeser.
+- Warna memakai pengaturan tema aplikasi yang sama.
+
+Instal ZIP core dan theme dengan mengganti versi terpasang, lalu bersihkan cache.
+Data tersimpan dan formulir /sw-admin tetap memakai alur versi 1.24.0.
+Diagram, tabel ringkasan dan kartu mengikuti hasil filter. Nominal dalam juta rupiah.
+
+VALIDASI
+Seluruh 14 file PHP lolos parser. Uji logika PHP terisolasi untuk CRUD,
+validasi, filter, ekspor dan backup/restore lulus. HTML empat menu berhasil dirender.
+Browser pengujian lokal tidak dapat berjalan, sehingga pemeriksaan visual desktop/
+ponsel dan pengujian pada WordPress server aktual masih perlu dilakukan.
